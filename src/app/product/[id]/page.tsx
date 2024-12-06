@@ -1,8 +1,56 @@
 import { Heart, Minus, Plus, Star, Truck, ArrowLeft, ArrowRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { ProductCard } from "@/components/ui/product-card"
+import img1 from "../../../assets/ProductImage (1).png"
+import img2 from "../../../assets/ProductImage (2).png"
+import img3 from "../../../assets/ProductImage (3).png"
+import img4 from "../../../assets/ProductImage (4).png"
+import img5 from "../../../assets/ProductImage (5).png"
+import FS1 from "../../../assets/FSImage1.png"
+import FS2 from "../../../assets/FSImage2.png"
+import FS3 from "../../../assets/FSImage3.png"
+import FS4 from "../../../assets/FSImage4.png"
 
 export default function ProductPage() {
+  const wishlistItems = [
+    {
+      name: "HAVIT HV-G92 Gamepad",
+      image: FS1.src,
+      price: 120,
+      originalPrice: 160,
+      rating: 5,
+      reviews: 88,
+      discount: 40
+    },
+    {
+      name: "AK-900 Wired Keyboard",
+      image: FS2.src,
+      price: 960,
+      originalPrice: 1160,
+      rating: 4,
+      reviews: 75,
+      discount: 35
+    },
+    {
+      name: "IPS LCD Gaming Monitor",
+      image: FS3.src,
+      price: 370,
+      originalPrice: 400,
+      rating: 5,
+      reviews: 99,
+      discount: 30
+    },
+    {
+      name: "S-Series Comfort Chair",
+      image: FS4.src,
+      price: 375,
+      originalPrice: 400,
+      rating: 4,
+      reviews: 99,
+      discount: 25
+    }
+  ]
+
   return (
     <div className="container py-20">
       <div className="flex items-center gap-3 mb-20">
@@ -16,10 +64,10 @@ export default function ProductPage() {
       <div className="grid grid-cols-2 gap-16 mb-20">
         <div className="flex gap-8">
           <div className="space-y-4">
-            {[1, 2, 3, 4].map((i) => (
+            {[img2, img3, img4, img5].map((i) => (
               <img
                 key={i}
-                src="/placeholder.svg"
+                src={i.src}
                 alt={`Product view ${i}`}
                 className="w-24 h-24 object-cover rounded cursor-pointer"
               />
@@ -27,7 +75,7 @@ export default function ProductPage() {
           </div>
           <div className="flex-1">
             <img
-              src="/placeholder.svg"
+              src={img1.src}
               alt="Product main view"
               className="w-full aspect-square object-cover rounded"
             />
@@ -112,17 +160,9 @@ export default function ProductPage() {
       <div>
         <h2 className="text-2xl font-medium mb-10">Related Items</h2>
         <div className="grid grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((i) => (
-            <ProductCard
-              key={i}
-              name="Gaming Controller"
-              image="/placeholder.svg"
-              price={160}
-              originalPrice={170}
-              rating={4}
-              reviews={88}
-            />
-          ))}
+        {wishlistItems.map((item) => (
+          <ProductCard key={item.name} {...item} />
+        ))}
         </div>
       </div>
     </div>

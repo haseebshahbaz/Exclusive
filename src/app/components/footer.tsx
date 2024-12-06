@@ -5,12 +5,11 @@ import QRImage from "../../assets/Qrcode 1.png"
 import AppleImage from "../../assets/download-appstore.png"
 import GoogleImgae from "../../assets/GooglePlay.png"
 
-
 export function Footer() {
   return (
     <footer className="bg-black text-white pt-20 pb-6">
       <div className="container">
-        <div className="grid grid-cols-5 gap-8 pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pb-16">
           {/* Exclusive Column */}
           <div>
             <h3 className="text-2xl font-bold mb-6">Exclusive</h3>
@@ -68,13 +67,13 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-medium mb-6">Download App</h3>
             <p className="text-xs text-white/60 mb-4">Save $3 with App New User Only</p>
-            <div className="flex gap-2 mb-6">
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
               <div className="bg-black p-2 border border-white rounded">
-                <img src={QRImage.src}alt="QR Code" className="w-24 h-24" />
+                <img src={QRImage.src} alt="QR Code" className="w-24 h-24" />
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-row sm:flex-col lg:flex-row gap-2">
                 <a href="#" className="block">
-                  <img src={GoogleImgae.src} alt="Get it on Google Play" className="h-10" />
+                <img src={GoogleImgae.src}alt="Get it on Google Play" className="h-10" />
                 </a>
                 <a href="#" className="block">
                   <img src={AppleImage.src} alt="Download on the App Store" className="h-10" />

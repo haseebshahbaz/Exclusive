@@ -1,4 +1,5 @@
 import { Volume2, Mic2, Music, Settings } from 'lucide-react'
+import Image from "../../../assets/MusicBannerImage.png"
 
 export function MusicBanner() {
   return (
@@ -28,7 +29,7 @@ export function MusicBanner() {
           </div>
           <div className="flex-1">
             <img 
-              src="/speaker.png" 
+              src={Image.src} 
               alt="JBL Speaker" 
               className="w-full h-full object-contain"
             />
