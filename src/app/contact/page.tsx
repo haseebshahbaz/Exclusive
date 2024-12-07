@@ -6,51 +6,55 @@ import { Textarea } from "@/components/ui/textarea"
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-[80px]">
+      <div className="container mx-auto px-4 py-[80px]">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-[13px] mb-[80px]">
-          <a href="/" className="text-[#000000]/50 text-sm font-normal hover:text-[#000000]/70 transition-colors">
+        <div className="flex items-center gap-[13px] mb-[80px] text-sm">
+          <a href="/" className="text-[#000000]/60 hover:text-[#000000]/80 transition-colors">
             Home
           </a>
-          <span className="text-[#000000]/50 text-sm">/</span>
-          <span className="text-sm font-normal">Contact</span>
+          <span className="text-[#000000]/60">/</span>
+          <span>Contact</span>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr,1.5fr] gap-8 lg:gap-[90px]">
+        <div className="grid lg:grid-cols-[400px,1fr] gap-[90px]">
           {/* Left Column */}
-          <div className="shadow-[0_0_0_1px_rgba(0,157,255,0.25)] rounded-md p-8">
+          <div className="bg-white rounded-md shadow-[0_0_20px_5px_rgba(0,0,0,0.05)] p-[32px] h-fit">
             <div className="space-y-[34px]">
-              {/* Call Us Section */}
+              {/* Call To Us Section */}
               <div className="space-y-6">
                 <div className="inline-flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#DB4444]">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-[20px] font-medium text-[#000000]">Call To Us</h2>
                 <div className="space-y-4">
-                  <p className="text-base text-[#000000]/60">We are available 24/7, 7 days a week.</p>
-                  <p className="text-base text-[#000000]/60">Phone: +8801611112222</p>
+                  <h2 className="text-[20px] font-medium">Call To Us</h2>
+                  <div className="space-y-2">
+                    <p className="text-base text-[#000000]/60">We are available 24/7, 7 days a week.</p>
+                    <p className="text-base text-[#000000]/60">Phone: +8801611112222</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="w-full h-[1px] bg-[#000000]/20" />
+              <div className="w-full h-[1px] bg-[#000000]/10" />
 
               {/* Write To Us Section */}
               <div className="space-y-6">
                 <div className="inline-flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#DB4444]">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-[20px] font-medium text-[#000000]">Write To Us</h2>
                 <div className="space-y-4">
-                  <p className="text-base text-[#000000]/60">Fill out our form and we will contact you within 24 hours.</p>
-                  <p className="text-base text-[#000000]/60">Emails: customer@exclusive.com</p>
-                  <p className="text-base text-[#000000]/60">Emails: support@exclusive.com</p>
+                  <h2 className="text-[20px] font-medium">Write To Us</h2>
+                  <div className="space-y-2">
+                    <p className="text-base text-[#000000]/60">Fill out our form and we will contact you within 24 hours.</p>
+                    <p className="text-base text-[#000000]/60">Emails: customer@exclusive.com</p>
+                    <p className="text-base text-[#000000]/60">Emails: support@exclusive.com</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="space-y-[32px]">
+          <div className="space-y-[32px] bg-white rounded-md shadow-[0_0_20px_5px_rgba(0,0,0,0.05)] p-[32px]">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <Input 
                 type="text" 
@@ -75,7 +79,7 @@ export default function ContactPage() {
             <div className="flex justify-end">
               <Button 
                 type="submit"
-                className="h-[56px] px-12 bg-[#DB4444] hover:bg-[#DB4444]/90 text-white text-base font-medium transition-colors rounded-md"
+                className="h-[56px] px-12 bg-[#DB4444] hover:bg-[#DB4444]/90 text-white text-base font-medium transition-colors rounded-[4px]"
               >
                 Send Message
               </Button>

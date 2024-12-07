@@ -9,6 +9,7 @@ interface ProductCardProps {
   rating: number;
   reviews: number;
   discount?: number;
+  showDeleteIcon?: boolean;
 }
 
 export function ProductCard({ name, image, price, originalPrice, rating, reviews, discount }: ProductCardProps) {
