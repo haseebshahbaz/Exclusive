@@ -1,9 +1,10 @@
-import { Facebook, Twitter, Instagram, LinkedinIcon as LinkedIn } from 'lucide-react'
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import QRImage from "../../assets/Qrcode 1.png"
-import AppleImage from "../../assets/download-appstore.png"
-import GoogleImgae from "../../assets/GooglePlay.png"
+import Image from 'next/image';
+import { Facebook, Twitter, Instagram, LinkedinIcon as LinkedIn } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import QRImage from "../../assets/Qrcode 1.png";
+import AppleImage from "../../assets/download-appstore.png";
+import GoogleImage from "../../assets/GooglePlay.png";
 
 export function Footer() {
   return (
@@ -16,14 +17,14 @@ export function Footer() {
             <h4 className="text-xl mb-4">Subscribe</h4>
             <p className="text-base mb-4">Get 10% off your first order</p>
             <div className="flex">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
+              <Input
+                type="email"
+                placeholder="Enter your email"
                 className="bg-transparent border-white text-white placeholder:text-white/60"
               />
               <Button variant="ghost" className="border-white ml-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Button>
             </div>
@@ -69,14 +70,14 @@ export function Footer() {
             <p className="text-xs text-white/60 mb-4">Save $3 with App New User Only</p>
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
               <div className="bg-black p-2 border border-white rounded">
-                <img src={QRImage.src} alt="QR Code" className="w-24 h-24" />
+                <Image src={QRImage} alt="QR Code" width={96} height={96} />
               </div>
               <div className="flex flex-row sm:flex-col lg:flex-row gap-2">
                 <a href="#" className="block">
-                <img src={GoogleImgae.src}alt="Get it on Google Play" className="h-10" />
+                  <Image src={GoogleImage} alt="Get it on Google Play" width={160} height={40} />
                 </a>
                 <a href="#" className="block">
-                  <img src={AppleImage.src} alt="Download on the App Store" className="h-10" />
+                  <Image src={AppleImage} alt="Download on the App Store" width={160} height={40} />
                 </a>
               </div>
             </div>
@@ -93,6 +94,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

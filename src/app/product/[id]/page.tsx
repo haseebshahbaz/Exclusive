@@ -1,6 +1,7 @@
-import { Heart, Minus, Plus, Star, Truck, ArrowLeft, ArrowRight } from 'lucide-react'
+import { Heart, Minus, Plus, Star, Truck, ArrowLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { ProductCard } from "@/components/ui/product-card"
+import Image from 'next/image'
 import img1 from "../../../assets/ProductImage (1).png"
 import img2 from "../../../assets/ProductImage (2).png"
 import img3 from "../../../assets/ProductImage (3).png"
@@ -10,6 +11,7 @@ import FS1 from "../../../assets/FSImage1.png"
 import FS2 from "../../../assets/FSImage2.png"
 import FS3 from "../../../assets/FSImage3.png"
 import FS4 from "../../../assets/FSImage4.png"
+import Link from 'next/link'
 
 export default function ProductPage() {
   const wishlistItems = [
@@ -54,9 +56,9 @@ export default function ProductPage() {
   return (
     <div className="container py-20">
       <div className="flex items-center gap-3 mb-20">
-        <a href="/" className="text-black/60">Account</a>
+        <Link href="/" className="text-black/60">Account</Link>
         <span>/</span>
-        <a href="/gaming" className="text-black/60">Gaming</a>
+        <Link href="/" className="text-black/60">Gaming</Link>
         <span>/</span>
         <span>Havic HV G-92 Gamepad</span>
       </div>
@@ -64,20 +66,24 @@ export default function ProductPage() {
       <div className="grid grid-cols-2 gap-16 mb-20">
         <div className="flex gap-8">
           <div className="space-y-4">
-            {[img2, img3, img4, img5].map((i) => (
-              <img
-                key={i}
+            {[img2, img3, img4, img5].map((i, index) => (
+              <Image
+                key={index}
                 src={i.src}
-                alt={`Product view ${i}`}
-                className="w-24 h-24 object-cover rounded cursor-pointer"
+                alt={`Product view ${index + 1}`}
+                width={96} // Width in pixels
+                height={96} // Height in pixels
+                className="object-cover rounded cursor-pointer"
               />
             ))}
           </div>
           <div className="flex-1">
-            <img
+            <Image
               src={img1.src}
               alt="Product main view"
-              className="w-full aspect-square object-cover rounded"
+              width={500} // Adjust as needed
+              height={500} // Adjust as needed
+              className="object-cover rounded"
             />
           </div>
         </div>
@@ -160,12 +166,11 @@ export default function ProductPage() {
       <div>
         <h2 className="text-2xl font-medium mb-10">Related Items</h2>
         <div className="grid grid-cols-4 gap-8">
-        {wishlistItems.map((item) => (
-          <ProductCard key={item.name} {...item} />
-        ))}
+          {wishlistItems.map((item) => (
+            <ProductCard key={item.name} {...item} />
+          ))}
         </div>
       </div>
     </div>
   )
 }
-

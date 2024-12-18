@@ -129,7 +129,7 @@ export function NewArrival() {
             <div className="p-[40px] h-full flex justify-between items-center">
               <div className="max-w-[255px]">
                 <h3 className="text-[24px] font-semibold text-white mb-[16px]">
-                  Women's Collections
+                  Women Collection
                 </h3>
                 <p className="text-[14px] leading-[21px] text-white/60 mb-[16px]">
                   Featured woman collections that give you another vibe.

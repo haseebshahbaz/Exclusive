@@ -1,21 +1,13 @@
-import { X, ChevronUp, ChevronDown } from 'lucide-react'
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import FS3 from "../../assets/FSImage3.png"
-import FS1 from "../../assets/FSImage1.png"
-
-
-interface CartItem {
-  id: number
-  name: string
-  image: string
-  price: number
-  quantity: number
-}
+import { X, ChevronUp, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import FS3 from "../../assets/FSImage3.png";
+import FS1 from "../../assets/FSImage1.png";
+import Link from "next/link";
 
 export default function CartPage() {
-  const cartItems=[
+  const cartItems = [
     {
       id: 1,
       quantity: 1,
@@ -25,7 +17,7 @@ export default function CartPage() {
       originalPrice: 400,
       rating: 5,
       reviews: 99,
-      discount: 30
+      discount: 30,
     },
     {
       id: 2,
@@ -36,16 +28,21 @@ export default function CartPage() {
       originalPrice: 160,
       rating: 5,
       reviews: 88,
-      discount: 40
-    }
-  ]
+      discount: 40,
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-[80px]">
         {/* Breadcrumb */}
         <div className="flex items-center gap-[13px] mb-[80px] text-sm">
-          <a href="/" className="text-[#000000]/50 hover:text-[#000000]/70 transition-colors">Home</a>
+          <Link
+            href="/"
+            className="text-[#000000]/50 hover:text-[#000000]/70 transition-colors"
+          >
+            Home
+          </Link>
           <span className="text-[#000000]/50">/</span>
           <span>Cart</span>
         </div>
@@ -66,9 +63,7 @@ export default function CartPage() {
                 <tr key={item.id} className="relative">
                   <td className="py-[30px] pr-4">
                     <div className="flex items-center gap-[23px]">
-                      <button
-                        className="absolute left-[-20px] top-[50%] -translate-y-1/2 hover:text-[#DB4444] transition-colors"
-                      >
+                      <button className="absolute left-[-20px] top-[50%] -translate-y-1/2 hover:text-[#DB4444] transition-colors">
                         <X className="w-5 h-5" />
                       </button>
                       <div className="relative w-[54px] h-[54px] bg-[#F5F5F5] rounded-[4px] overflow-hidden flex-shrink-0">
@@ -86,25 +81,23 @@ export default function CartPage() {
                     <span className="text-base">${item.price}</span>
                   </td>
                   <td className="py-[30px] pr-4">
-  <div className="inline-flex flex-row items-center border border-[#000000]/20 rounded-[4px]">
-    <button
-      className="w-[40px] h-[40px] flex items-center justify-center hover:bg-[#DB4444] hover:text-white transition-colors border-r border-[#000000]/20"
-    >
-      <ChevronDown className="w-4 h-4" />
-    </button>
-    <div className="w-[50px] h-[40px] flex items-center justify-center text-base">
-      {item.quantity}
-    </div>
-    <button
-      className="w-[40px] h-[40px] flex items-center justify-center hover:bg-[#DB4444] hover:text-white transition-colors border-l border-[#000000]/20"
-    >
-      <ChevronUp className="w-4 h-4" />
-    </button>
-  </div>
-</td>
+                    <div className="inline-flex flex-row items-center border border-[#000000]/20 rounded-[4px]">
+                      <button className="w-[40px] h-[40px] flex items-center justify-center hover:bg-[#DB4444] hover:text-white transition-colors border-r border-[#000000]/20">
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                      <div className="w-[50px] h-[40px] flex items-center justify-center text-base">
+                        {item.quantity}
+                      </div>
+                      <button className="w-[40px] h-[40px] flex items-center justify-center hover:bg-[#DB4444] hover:text-white transition-colors border-l border-[#000000]/20">
+                        <ChevronUp className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </td>
 
                   <td className="py-[30px]">
-                    <span className="text-base">${item.price * item.quantity}</span>
+                    <span className="text-base">
+                      ${item.price * item.quantity}
+                    </span>
                   </td>
                 </tr>
               ))}
@@ -171,6 +164,5 @@ export default function CartPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

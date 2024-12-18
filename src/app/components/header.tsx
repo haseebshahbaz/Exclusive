@@ -1,19 +1,19 @@
 import { Search, Heart, ShoppingCart } from 'lucide-react'
+import Link from 'next/link'
 
 export function Header() {
   return (
     <header className="py-4 md:h-[86px] flex items-center border-b border-[#E5E5E5]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
-          <a href="/" className="text-2xl font-bold mb-4 md:mb-0">
+          <Link href="/" className="text-2xl font-bold mb-4 md:mb-0">
             Exclusive
-          </a>
+          </Link>
           
           <nav className="flex items-center space-x-4 md:space-x-12 mb-4 md:mb-0">
-            <a href="/" className="text-sm md:text-base font-medium">Home</a>
-            <a href="/contact" className="text-sm md:text-base hover:text-black/70">Contact</a>
-            <a href="/about" className="text-sm md:text-base hover:text-black/70">About</a>
-            <a href="/sign-up" className="text-sm md:text-base hover:text-black/70">Sign Up</a>
+            <Link href="/" className="text-sm md:text-base font-medium">Home</Link>
+            <Link href="/contact" className="text-sm md:text-base hover:text-black/70">Contact</Link>
+            <Link href="/about" className="text-sm md:text-base hover:text-black/70">About</Link>
           </nav>
 
           <div className="flex items-center gap-4 md:gap-6 w-full md:w-auto">

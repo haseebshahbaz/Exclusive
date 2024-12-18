@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import { Heart, Eye } from 'lucide-react'
+import Link from 'next/link';
 
 interface ProductCardProps {
   name: string;
@@ -32,7 +33,7 @@ export function ProductCard({ name, image, price, originalPrice, rating, reviews
             <Heart className="w-5 h-5" />
           </button>
           <button className="w-[34px] h-[34px] flex items-center justify-center bg-white rounded-full hover:bg-[#DB4444] hover:text-white transition-colors">
-          <a href='/product/1'><Eye className="w-5 h-5" /></a>
+          <Link href='/product/1'><Eye className="w-5 h-5" /></Link>
           </button>
         </div>
         <button className="absolute bottom-0 left-0 right-0 h-[41px] bg-black text-white text-base font-medium opacity-0 group-hover:opacity-100 transition-opacity">

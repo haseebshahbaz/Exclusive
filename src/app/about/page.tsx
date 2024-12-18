@@ -4,6 +4,7 @@ import img1 from "../../assets/AboutImage (1).png"
 import img2 from "../../assets/AboutImage (2).png"
 import img3 from "../../assets/AboutImage (3).png"
 import img4 from "../../assets/AboutImage (4).png"
+import Link from 'next/link'
 
 
 export default function AboutPage() {
@@ -55,7 +56,7 @@ export default function AboutPage() {
       <div className="container py-10 md:py-20">
         {/* Breadcrumb */}
         <div className="flex items-center gap-3 mb-10 md:mb-20">
-          <a href="/" className="text-black/60">Home</a>
+          <Link href="/" className="text-black/60">Home</Link>
           <span>/</span>
           <span>About</span>
         </div>
@@ -65,7 +66,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <h1 className="text-4xl font-semibold">Our Story</h1>
             <p className="text-black/60">
-              Launced in 2015, Exclusive is South Asia's premier online shopping marketplace with an active presence in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sellers and 300 brands and serves 3 millions customers across the region.
+              Launced in 2015, Exclusive is South Asia premier online shopping marketplace with an active presence in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sellers and 300 brands and serves 3 millions customers across the region.
             </p>
             <p className="text-black/60">
               Exclusive has more than 1 Million products to offer, growing at a very fast pace. Exclusive offers a diverse assortment in categories ranging from consumer.

@@ -2,6 +2,7 @@ import { Phone, Mail } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import Link from 'next/link'
 
 export default function ContactPage() {
   return (
@@ -9,9 +10,9 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-[80px]">
         {/* Breadcrumb */}
         <div className="flex items-center gap-[13px] mb-[80px] text-sm">
-          <a href="/" className="text-[#000000]/60 hover:text-[#000000]/80 transition-colors">
+          <Link href="/" className="text-[#000000]/60 hover:text-[#000000]/80 transition-colors">
             Home
-          </a>
+          </Link>
           <span className="text-[#000000]/60">/</span>
           <span>Contact</span>
         </div>

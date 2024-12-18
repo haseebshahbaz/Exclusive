@@ -51,7 +51,7 @@ export function FlashSales() {
         <div>
           <div className="flex items-center gap-4 mb-3">
             <div className="w-5 h-10 bg-[#DB4444] rounded-md"></div>
-            <h3 className="text-[#DB4444] text-base font-semibold">Today's</h3>
+            <h3 className="text-[#DB4444] text-base font-semibold">Today</h3>
           </div>
           <h2 className="text-4xl font-semibold">Flash Sales </h2>
         </div>

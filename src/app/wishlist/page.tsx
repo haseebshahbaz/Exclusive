@@ -1,5 +1,3 @@
-import { Trash2, Eye } from 'lucide-react'
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import FS1 from "../../assets/FSImage1.png"
 import FS2 from "../../assets/FSImage2.png"
@@ -10,6 +8,7 @@ import BS2 from "../../assets/BSPImage2.png"
 import BS3 from "../../assets/BSPImage3.png"
 import BS4 from "../../assets/BSPImage4.png"
 import { ProductCard } from '@/components/ui/product-card'
+import Link from "next/link"
 
 export default function WishlistPage() {
   const wishlistItems = [
@@ -89,9 +88,9 @@ export default function WishlistPage() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-[80px]">
       {/* Breadcrumb */}
       <div className="flex items-center gap-[13px] mb-[80px]">
-        <a href="/" className="text-[#000000]/50 text-sm font-normal hover:text-[#000000]/70 transition-colors">
+        <Link href="/" className="text-[#000000]/50 text-sm font-normal hover:text-[#000000]/70 transition-colors">
           Home
-        </a>
+        </Link>
         <span className="text-[#000000]/50 text-sm">/</span>
         <span className="text-sm font-normal">Wishlist</span>
       </div>
